@@ -1,0 +1,61 @@
+/* ===== CSS Variables ===== */
+:root {
+    /* Light theme (default) */
+    --color-bg: #ffffff;
+    --color-surface: #f8f7ff;
+    --color-primary: #7c3aed;
+    --color-primary-hover: #6d28d9;
+    --color-text: #1e1b4b;
+    --color-text-secondary: #6b7280;
+    --color-border: #e0e7ff;
+  
+    /* Spacing */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 48px;
+  
+    /* Radius */
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-full: 9999px;
+  
+    /* Transitions */
+    --transition: 0.2s ease;
+  }
+  
+  /* ===== Dark Theme ===== */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-bg: #0f0a1a;
+      --color-surface: #1a1233;
+      --color-text: #f5f3ff;
+      --color-text-secondary: #a5b4fc;
+      --color-border: #2d1f5e;
+    }
+  }
+  
+  /* ===== Reset & Base ===== */
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    min-height: 100vh;
+    transition: background-color var(--transition), color var(--transition);
+  }
+  
+  #__nuxt {
+    min-height: 100vh;
+  }
