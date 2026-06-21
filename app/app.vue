@@ -1,19 +1,18 @@
 <template>
   <div class="app-layout">
     <!-- Левая панель — ввод -->
+
     <main class="input-panel">
       <h1 class="title">MindOS</h1>
       <p class="subtitle">Наговори или напиши всё, что у тебя в голове</p>
-      
-      <textarea 
+
+      <textarea
+        v-model="rawText"
         class="thought-input"
         placeholder="Я хочу в будущем..."
-        v-model="rawText"
       ></textarea>
-      
-      <button class="structure-btn" @click="structureThoughts">
-        Структурировать
-      </button>
+
+      <button class="structure-btn" @click="structureThoughts">Структурировать</button>
     </main>
 
     <!-- Правая панель — результат -->
@@ -24,12 +23,12 @@
 </template>
 
 <script setup lang="ts">
-const rawText = ref('')
+const rawText = ref('');
 
 const structureThoughts = () => {
   // Пока заглушка — позже отправим в Gemini
-  console.log('Структурируем:', rawText.value)
-}
+  console.log('Структурируем:', rawText.value);
+};
 </script>
 
 <style>
@@ -95,7 +94,9 @@ const structureThoughts = () => {
   border: none;
   border-radius: var(--radius-full);
   cursor: pointer;
-  transition: background var(--transition), transform var(--transition);
+  transition:
+    background var(--transition),
+    transform var(--transition);
 
   &:hover {
     background: var(--color-primary-hover);
