@@ -1,0 +1,3 @@
+#!/bin/sh
+# Оставляем только сам вызов lint-staged
+npx lint-staged
