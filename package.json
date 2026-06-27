@@ -8,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "lint": "eslint . --fix",
     "format": "prettier --write .",
     "prepare": "husky"
   },
@@ -22,12 +22,14 @@
     ]
   },
   "dependencies": {
+    "@nuxtjs/supabase": "2.0.9",
     "nuxt": "4.4.8",
     "vue": "3.5.35",
     "vue-router": "5.1.0"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
+    "@nuxt/eslint": "^1.16.0",
     "@vue/eslint-config-prettier": "10.2.0",
     "@vue/eslint-config-typescript": "14.8.0",
     "autoprefixer": "10.5.0",
