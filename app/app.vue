@@ -29,6 +29,15 @@ const structureThoughts = () => {
   // Пока заглушка — позже отправим в Gemini
   console.log('Структурируем:', rawText.value);
 };
+
+const supabase = useSupabaseClient();
+
+onMounted(async () => {
+  const { data, error } = await supabase.from('entries').select('*');
+
+  console.log(data);
+  console.log(error);
+});
 </script>
 
 <style>
